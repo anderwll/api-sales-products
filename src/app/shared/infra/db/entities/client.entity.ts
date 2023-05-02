@@ -1,7 +1,7 @@
 import { Column, Entity } from 'typeorm';
 import BaseEntity from './base-entity.entity';
 
-@Entity({ name: 'client' })
+@Entity({ name: 'clients' })
 export class ClientEntity extends BaseEntity {
     @Column()
     fantasy!: string;
