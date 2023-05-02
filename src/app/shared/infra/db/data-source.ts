@@ -1,11 +1,9 @@
 import { DataSource } from 'typeorm';
+import 'dotenv/config';
 
 export const appDataSource = new DataSource({
     type: 'postgres',
-    host: 'motty.db.elephantsql.com',
-    port: 5432,
-    username: 'pmfakupe',
-    password: 'qBadWkd8sIiUB8C4ZFBnsvC-VzSDu70m',
+    url: process.env.BD_URL,
     database: 'pmfakupe',
     logging: true,
     ssl: {
