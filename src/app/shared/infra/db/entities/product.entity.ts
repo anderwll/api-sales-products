@@ -1,9 +1,10 @@
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
 import { Unit } from '../../../domain/enums';
 import BaseEntity from './base-entity.entity';
+import { OrderEntity } from './order.entity';
 
 @Entity({ name: 'products' })
-export class ClientEntity extends BaseEntity {
+export class ProductEntity extends BaseEntity {
     @Column()
     description!: string;
 
@@ -18,4 +19,8 @@ export class ClientEntity extends BaseEntity {
 
     @Column()
     active!: boolean;
+
+    @ManyToOne(() => OrderEntity, (entity) => entity.listProducts)
+    @JoinColumn({ name: 'order_id', referencedColumnName: 'id' })
+    order?: OrderEntity;
 }

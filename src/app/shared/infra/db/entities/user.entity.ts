@@ -1,6 +1,7 @@
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
 import BaseEntity from './base-entity.entity';
 import { Profile } from '../../../domain/enums';
+import { OrderEntity } from './order.entity';
 
 @Entity({ name: 'users' })
 export class UserEntity extends BaseEntity {
@@ -18,4 +19,8 @@ export class UserEntity extends BaseEntity {
 
     @Column()
     company!: string;
+
+    @ManyToOne(() => OrderEntity, (entity) => entity.representative)
+    @JoinColumn({ name: 'order_id', referencedColumnName: 'id' })
+    order?: OrderEntity;
 }
