@@ -1,4 +1,5 @@
 import { DataSource } from 'typeorm';
+import entities from './entities';
 import 'dotenv/config';
 
 export const appDataSource = new DataSource({
@@ -10,4 +11,5 @@ export const appDataSource = new DataSource({
         rejectUnauthorized: false,
     },
     synchronize: false,
+    entities,
 });
