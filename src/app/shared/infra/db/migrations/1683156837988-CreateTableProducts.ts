@@ -39,7 +39,7 @@ export class CreateTableProducts1683156837988 implements MigrationInterface {
                     },
                     {
                         name: 'created_at',
-                        type: 'varchar',
+                        type: 'timestamp',
                         isNullable: false,
                     },
                     {

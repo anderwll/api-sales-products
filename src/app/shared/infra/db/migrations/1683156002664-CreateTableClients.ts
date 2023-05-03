@@ -42,7 +42,7 @@ export class CreateTableClients1683156002664 implements MigrationInterface {
                     },
                     {
                         name: 'created_at',
-                        type: 'varchar',
+                        type: 'timestamp',
                         isNullable: false,
                     },
                     {
