@@ -1,5 +1,6 @@
-import { Column, Entity } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
 import BaseEntity from './base-entity.entity';
+import { OrderEntity } from './order.entity';
 
 @Entity({ name: 'clients' })
 export class ClientEntity extends BaseEntity {
@@ -17,4 +18,8 @@ export class ClientEntity extends BaseEntity {
 
     @Column()
     company!: string;
+
+    @ManyToOne(() => OrderEntity, (entity) => entity.client)
+    @JoinColumn({ name: 'order_id', referencedColumnName: 'id' })
+    order?: OrderEntity;
 }
