@@ -4,11 +4,11 @@ import { HttpResponse } from '../../../../shared/presentation';
 
 export class UserController {
     async createUser(req: Request, res: Response) {
-        const { name, email, password, profile } = req.body;
+        const { name, email, password } = req.body;
         try {
             const userRepository = new UserRepository();
 
-            const user = await userRepository.saveUser({ name, email, password, profile });
+            const user = await userRepository.saveUser({ name, email, password });
 
             const response: HttpResponse = {
                 success: true,

@@ -1,3 +1,4 @@
+import { Profile } from '../../../../shared/domain/enums';
 import { appDataSource } from '../../../../shared/infra/db/data-source';
 import { UserEntity } from '../../../../shared/infra/db/entities/user.entity';
 import { CreateUserDTO, UserDetailDTO } from '../../domain/dtos';
@@ -9,8 +10,8 @@ export class UserRepository {
         const entity = this._repository.create({
             email: user.email,
             name: user.name,
-            profile: user.profile,
             password: user.password,
+            profile: Profile.SELLER,
         });
         await this._repository.save(entity);
 

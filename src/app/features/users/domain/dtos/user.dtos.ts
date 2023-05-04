@@ -4,7 +4,6 @@ export interface CreateUserDTO {
     name: string;
     email: string;
     password: string;
-    profile: Profile;
 }
 
 export interface UserDetailDTO {
