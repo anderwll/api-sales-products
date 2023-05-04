@@ -17,9 +17,6 @@ export class UserEntity extends BaseEntity {
     @Column({ type: 'enum', enum: Profile })
     profile!: Profile;
 
-    @Column()
-    company!: string;
-
     @ManyToOne(() => OrderEntity, (entity) => entity.representative)
     @JoinColumn({ name: 'order_id', referencedColumnName: 'id' })
     order?: OrderEntity;
