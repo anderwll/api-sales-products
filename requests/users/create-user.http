@@ -1,0 +1,12 @@
+@HOST = http://localhost:8080
+
+POST {{HOST}}/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Eduarda",
+  "email": "duda@rodrigues.com",
+  "password": "senha123",
+  "profile": "SELLER"
+}
+

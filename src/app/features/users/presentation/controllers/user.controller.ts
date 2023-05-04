@@ -8,7 +8,7 @@ export class UserController {
         try {
             const userRepository = new UserRepository();
 
-            const user = userRepository.saveUser({ name, email, password, profile });
+            const user = await userRepository.saveUser({ name, email, password, profile });
 
             const response: HttpResponse = {
                 success: true,
@@ -23,7 +23,7 @@ export class UserController {
                 message: error.message,
             };
 
-            return res.status(400).json(responseError);
+            throw responseError;
         }
     }
 }
