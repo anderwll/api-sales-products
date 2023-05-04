@@ -1,6 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
 import { z, ZodError } from 'zod';
-import { Profile } from '../../../../shared/domain/enums';
 import { HttpResponse } from '../../../../shared/presentation';
 
 export const createUserValidator = (req: Request, res: Response, next: NextFunction) => {
