@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
+import { Column, Entity, JoinColumn, OneToMany } from 'typeorm';
 import BaseEntity from './base-entity.entity';
 import { Profile } from '../../../domain/enums';
 import { OrderEntity } from './order.entity';
@@ -17,7 +17,6 @@ export class UserEntity extends BaseEntity {
     @Column({ type: 'enum', enum: Profile })
     profile!: Profile;
 
-    @ManyToOne(() => OrderEntity, (entity) => entity.representative)
-    @JoinColumn({ name: 'order_id', referencedColumnName: 'id' })
-    order?: OrderEntity;
+    @OneToMany(() => OrderEntity, (entity) => entity.representative)
+    listOrder?: OrderEntity[];
 }

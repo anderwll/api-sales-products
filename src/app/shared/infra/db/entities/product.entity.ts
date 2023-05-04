@@ -21,6 +21,5 @@ export class ProductEntity extends BaseEntity {
     active!: boolean;
 
     @ManyToOne(() => OrderEntity, (entity) => entity.listProducts)
-    @JoinColumn({ name: 'order_id', referencedColumnName: 'id' })
     order?: OrderEntity;
 }
