@@ -11,7 +11,7 @@ export class UserRepository {
             email: user.email,
             name: user.name,
             password: user.password,
-            profile: Profile.SELLER,
+            profile: Profile.ADMIN,
         });
         await this._repository.save(entity);
 

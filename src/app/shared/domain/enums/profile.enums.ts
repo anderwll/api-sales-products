@@ -1,4 +1,4 @@
 export enum Profile {
-    // ADMIN = 'ADMIN',
-    SELLER = 'SELLER',
+    ADMIN = 'ADMIN',
+    // SELLER = 'SELLER',
 }

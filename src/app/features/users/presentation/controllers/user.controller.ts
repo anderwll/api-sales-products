@@ -1,14 +1,15 @@
 import { Request, Response } from 'express';
 import { UserRepository } from '../../infra/repositories/user.repository';
 import { HttpResponse } from '../../../../shared/presentation';
+import { CreateUserUseCase } from '../../domain/usecase/create-user-usecase';
+import { CustomError } from '../../../../shared/errors';
 
 export class UserController {
     async createUser(req: Request, res: Response) {
         const { name, email, password } = req.body;
         try {
-            const userRepository = new UserRepository();
-
-            const user = await userRepository.saveUser({ name, email, password });
+            const useCase = new CreateUserUseCase();
+            const user = await useCase.execute({ name, email, password });
 
             const response: HttpResponse = {
                 success: true,
@@ -18,12 +19,15 @@ export class UserController {
 
             return res.status(200).json(response);
         } catch (error: any) {
-            const responseError: HttpResponse = {
-                success: true,
-                message: error.message,
-            };
+            if (error instanceof CustomError) {
+                const responseError: HttpResponse = {
+                    success: true,
+                    message: error.message,
+                };
 
-            throw responseError;
+                return responseError;
+            }
+            throw error;
         }
     }
 }
