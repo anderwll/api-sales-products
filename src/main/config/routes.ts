@@ -1,8 +1,10 @@
 import express, { Express } from 'express';
 import { initialPage } from './initial-page';
 import { usersRoutes } from '../../app/features/users/presentation/routes/user.routes';
+import { loginRoutes } from '../../app/features/authentication/presentation/routes/auth.routes';
 
 export const setupRoutes = (app: Express) => {
     app.get('/', (req, res) => res.status(200).send(initialPage));
+    app.use(loginRoutes());
     app.use(usersRoutes());
 };

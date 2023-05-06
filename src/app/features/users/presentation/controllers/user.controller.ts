@@ -21,11 +21,11 @@ export class UserController {
         } catch (error: any) {
             if (error instanceof CustomError) {
                 const responseError: HttpResponse = {
-                    success: true,
+                    success: false,
                     message: error.message,
                 };
 
-                return responseError;
+                return res.status(400).json(responseError);
             }
             throw error;
         }
