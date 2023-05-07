@@ -26,8 +26,8 @@ export class OrderRepository {
             representativeId: entity.representativeId,
             productId: entity.productId,
             amount: entity.amount,
-            total: entity.total,
             discount: entity.discount,
+            total: entity.total,
             createdAt: entity.createdAt,
             updatedAt: entity.updatedAt,
         };

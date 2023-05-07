@@ -11,6 +11,7 @@ export interface CreateOrderDTO {
     representativeId: string;
     productId: string;
     amount: number;
+    total?: number;
     discount: number;
 }
 

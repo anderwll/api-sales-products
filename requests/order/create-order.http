@@ -9,7 +9,7 @@ Content-Type: application/json
 {
   "clientId": "6081c2f2-41a6-4ef1-a627-98b54a0e6e6c",
   "representativeId": "d3e23941-a3bf-4dad-a504-8930706475bd",
-  "productId": "093eecfc-6725-483b-b5f1-8882c3962d09",
-   "amount": 45,
+  "productId": "09f024d2-9a48-4b50-be15-bdd7df7dc689",
+   "amount": 20,
    "discount": 0
 }
