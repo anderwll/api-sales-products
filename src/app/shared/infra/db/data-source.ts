@@ -5,7 +5,9 @@ import 'dotenv/config';
 
 export const appDataSource = new DataSource({
     type: 'postgres',
-    url: process.env.BD_URL,
+    url:
+        process.env.BD_URL ||
+        'postgres://anderwll:b0IJvSfC8Y5DyG6SjUvRjZv7NoJWZafB@dpg-cg56j6seoogsv95htkmg-a.oregon-postgres.render.com/my_first_db',
     database: 'pmfakupe',
     logging: true,
     ssl: {
