@@ -8,7 +8,7 @@ export class CreateClientUseCase {
 
         const exist = await clientRepository.existClientByCpfCnpj(createClientDTO.cpfCnpj);
 
-        if (exist) throw new CustomError('This customer already has an account.');
+        if (exist) throw new CustomError('This client already has an account.');
 
         const client = await clientRepository.saveClient(createClientDTO);
 
