@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
+import { Column, Entity, OneToMany } from 'typeorm';
 import { Unit } from '../../../domain/enums';
 import BaseEntity from './base-entity.entity';
 import { OrderEntity } from './order.entity';
@@ -20,6 +20,6 @@ export class ProductEntity extends BaseEntity {
     @Column()
     active!: boolean;
 
-    // @ManyToOne(() => OrderEntity, (entity) => entity.listProducts)
-    // order?: OrderEntity;
+    @OneToMany(() => OrderEntity, (entity) => entity.products)
+    order!: OrderEntity;
 }

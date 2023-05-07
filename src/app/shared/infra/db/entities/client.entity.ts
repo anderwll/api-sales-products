@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToOne } from 'typeorm';
+import { Column, Entity, OneToMany } from 'typeorm';
 import BaseEntity from './base-entity.entity';
 import { OrderEntity } from './order.entity';
 
@@ -19,6 +19,6 @@ export class ClientEntity extends BaseEntity {
     @Column()
     email!: string;
 
-    // @ManyToOne(() => OrderEntity, (entity) => entity.client)
-    // order?: OrderEntity;
+    @OneToMany(() => OrderEntity, (entity) => entity.client)
+    order!: OrderEntity[];
 }
