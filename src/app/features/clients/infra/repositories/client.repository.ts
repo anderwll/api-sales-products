@@ -16,7 +16,7 @@ export class ClientRepository {
 
         await this._repository.save(entity);
 
-        return this.mapperToUserDetail(entity);
+        return this.mapperToClientDetail(entity);
     }
 
     async existClientByCpfCnpj(cpfCnpj: string): Promise<boolean> {
@@ -25,7 +25,7 @@ export class ClientRepository {
         return exist;
     }
 
-    private mapperToUserDetail(entity: ClientEntity) {
+    private mapperToClientDetail(entity: ClientEntity) {
         return {
             id: entity.id,
             fantasy: entity.fantasy,

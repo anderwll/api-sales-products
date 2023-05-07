@@ -1,0 +1,15 @@
+@HOST = http://localhost:8080
+
+POST {{HOST}}/orders HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQzZTIzOTQxLWEzYmYtNGRhZC1hNTA0LTg5MzA3MDY0NzViZCIsIm5hbWUiOiJBbmRlcnNvbiBXaWxtc2VuIiwiZW1haWwiOiJhbmRlckB3aWxsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA4JExEbVJUemw3TVoyYWdjNDZYc0hjYi5FTWFRSG5VSGRCd2g5MTQyNnUyWUxESU1kek95RHJxIiwiaWF0IjoxNjgzNDg5MTYyLCJleHAiOjE2ODM1NzU1NjJ9.BPViJuQ-BwRRd7SWpJFEM0om5mygme98C3uZonf9FIM
+Content-Type: application/json
+
+# clientId, representativeId, productId, amount, discount
+
+{
+  "clientId": "6081c2f2-41a6-4ef1-a627-98b54a0e6e6c",
+  "representativeId": "d3e23941-a3bf-4dad-a504-8930706475bd",
+  "productId": "093eecfc-6725-483b-b5f1-8882c3962d09",
+   "amount": 45,
+   "discount": 0
+}

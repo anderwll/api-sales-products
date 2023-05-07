@@ -15,7 +15,7 @@ export class ProductRepository {
         });
         await this._repository.save(entity);
 
-        return this.mapperToUserDetail(entity);
+        return this.mapperToProductDetail(entity);
     }
 
     async existProductByDesc(description: string): Promise<boolean> {
@@ -28,7 +28,7 @@ export class ProductRepository {
         return exist;
     }
 
-    private mapperToUserDetail(entity: ProductEntity) {
+    private mapperToProductDetail(entity: ProductEntity) {
         return {
             id: entity.id,
             description: entity.description,
