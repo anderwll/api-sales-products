@@ -1,0 +1,14 @@
+@HOST = http://localhost:8080
+
+POST {{HOST}}/products HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQzZTIzOTQxLWEzYmYtNGRhZC1hNTA0LTg5MzA3MDY0NzViZCIsIm5hbWUiOiJBbmRlcnNvbiBXaWxtc2VuIiwiZW1haWwiOiJhbmRlckB3aWxsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA4JExEbVJUemw3TVoyYWdjNDZYc0hjYi5FTWFRSG5VSGRCd2g5MTQyNnUyWUxESU1kek95RHJxIiwiaWF0IjoxNjgzNDMyMDYzLCJleHAiOjE2ODM1MTg0NjN9.mbjc9R9qUtyriKjRZRvaNaNTjZH8_dKByyJKouDLshM
+Content-Type: application/json
+
+# description price unit amount
+
+{
+  "description": "Piso Laminado QSM 7MM",
+  "price": 95.88,
+  "unit": "M²",
+  "amount": 150
+}
