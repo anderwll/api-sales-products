@@ -1,19 +1,19 @@
 import { Request, Response } from 'express';
-import { HttpResponse } from '../../../../shared/presentation';
-import { CreateUserUseCase } from '../../domain/usecase/create-user.usecase';
 import { CustomError } from '../../../../shared/errors';
+import { HttpResponse } from '../../../../shared/presentation';
+import { CreateClientUseCase } from '../../domain/usecase/create-client.usecase';
 
-export class UserController {
-    async createUser(req: Request, res: Response) {
-        const { name, email, password } = req.body;
+export class ClientController {
+    async createClient(req: Request, res: Response) {
+        const { fantasy, cpfCnpj, phone, address, email } = req.body;
         try {
-            const useCase = new CreateUserUseCase();
-            const user = await useCase.execute({ name, email, password });
+            const useCase = new CreateClientUseCase();
+            const client = await useCase.execute({ fantasy, cpfCnpj, phone, address, email });
 
             const response: HttpResponse = {
                 success: true,
-                message: 'User created successfully.',
-                data: user,
+                message: 'Client created successfully.',
+                data: client,
             };
 
             return res.status(200).json(response);

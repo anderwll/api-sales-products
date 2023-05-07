@@ -3,14 +3,10 @@
 POST {{HOST}}/users HTTP/1.1
 Content-Type: application/json
 
+# name email password
+
 {
   "name": "Anderson Wilmsen",
   "email": "ander@will.com",
   "password": "senha123"
 }
-
-# {
-#   "name": "Joao",
-#   "email": "joao@pedro.com",
-#   "password": "senha123"
-# }

@@ -1,0 +1,15 @@
+@HOST = http://localhost:8080
+
+POST {{HOST}}/clients HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQzZTIzOTQxLWEzYmYtNGRhZC1hNTA0LTg5MzA3MDY0NzViZCIsIm5hbWUiOiJBbmRlcnNvbiBXaWxtc2VuIiwiZW1haWwiOiJhbmRlckB3aWxsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDA4JExEbVJUemw3TVoyYWdjNDZYc0hjYi5FTWFRSG5VSGRCd2g5MTQyNnUyWUxESU1kek95RHJxIiwiaWF0IjoxNjgzNDEzNzMzLCJleHAiOjE2ODM1MDAxMzN9.LVnYMKdBGpQPGLjWIj8LxiwI8DQdW9_yTuF7BBqZlK8
+Content-Type: application/json
+
+# fantasy, cpfCnpj, phone, address, email
+
+{
+  "fantasy": "Cliente Maria Lurdes",
+  "cpfCnpj": "65087505180",
+  "phone": "54 93421-3480",
+  "address": "Rua Josias, 111 - Barão/RS",
+  "email": "client@gmail.com"
+}

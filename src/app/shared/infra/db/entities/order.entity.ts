@@ -6,15 +6,13 @@ import { ClientEntity } from './client.entity';
 
 @Entity({ name: 'orders' })
 export class OrderEntity extends BaseEntity {
-    @OneToOne(() => ClientEntity, (entity) => entity.order)
-    @JoinColumn({ name: 'client_id', referencedColumnName: 'id' })
-    client!: ClientEntity;
-
-    @OneToOne(() => UserEntity, (entity) => entity.listOrder)
-    @JoinColumn({ name: 'representative_id', referencedColumnName: 'id' })
-    representative!: UserEntity;
-
-    @OneToMany(() => ProductEntity, (entity) => entity.order)
-    @JoinColumn({ name: 'product_id', referencedColumnName: 'id' })
-    listProducts!: ProductEntity[];
+    // @OneToOne(() => ClientEntity, (entity) => entity.order)
+    // @JoinColumn({ name: 'client_id', referencedColumnName: 'id' })
+    // client!: ClientEntity;
+    // @OneToOne(() => UserEntity, (entity) => entity.listOrder)
+    // @JoinColumn({ name: 'representative_id', referencedColumnName: 'id' })
+    // representative!: UserEntity;
+    // @OneToMany(() => ProductEntity, (entity) => entity.order)
+    // @JoinColumn({ name: 'product_id', referencedColumnName: 'id' })
+    // listProducts!: ProductEntity[];
 }

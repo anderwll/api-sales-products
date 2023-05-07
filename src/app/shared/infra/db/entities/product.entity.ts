@@ -20,6 +20,6 @@ export class ProductEntity extends BaseEntity {
     @Column()
     active!: boolean;
 
-    @ManyToOne(() => OrderEntity, (entity) => entity.listProducts)
-    order?: OrderEntity;
+    // @ManyToOne(() => OrderEntity, (entity) => entity.listProducts)
+    // order?: OrderEntity;
 }

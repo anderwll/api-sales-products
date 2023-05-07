@@ -19,13 +19,13 @@ export class UserRepository {
     }
 
     async existUserByEmail(email: string): Promise<boolean> {
-        const user = await this._repository.exist({
+        const exist = await this._repository.exist({
             where: {
                 email,
             },
         });
 
-        return user;
+        return exist;
     }
 
     private mapperToUserDetail(entity: UserEntity) {

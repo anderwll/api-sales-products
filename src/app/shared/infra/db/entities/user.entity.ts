@@ -17,6 +17,6 @@ export class UserEntity extends BaseEntity {
     @Column({ type: 'enum', enum: Profile })
     profile!: Profile;
 
-    @OneToMany(() => OrderEntity, (entity) => entity.representative)
-    listOrder?: OrderEntity[];
+    // @OneToMany(() => OrderEntity, (entity) => entity.representative)
+    // listOrder?: OrderEntity[];
 }

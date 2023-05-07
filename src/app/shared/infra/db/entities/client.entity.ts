@@ -17,9 +17,8 @@ export class ClientEntity extends BaseEntity {
     address!: string;
 
     @Column()
-    company!: string;
+    email!: string;
 
-    @ManyToOne(() => OrderEntity, (entity) => entity.client)
-    @JoinColumn({ name: 'order_id', referencedColumnName: 'id' })
-    order?: OrderEntity;
+    // @ManyToOne(() => OrderEntity, (entity) => entity.client)
+    // order?: OrderEntity;
 }
