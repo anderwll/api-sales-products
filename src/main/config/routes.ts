@@ -7,8 +7,8 @@ import { productRoutes } from '../../app/features/products/presentation/routes/p
 
 export const setupRoutes = (app: Express) => {
     app.get('/', (req, res) => res.status(200).send(initialPage));
-    app.use(loginRoutes());
     app.use(usersRoutes());
+    app.use(loginRoutes());
     app.use(clientsRoutes());
     app.use(productRoutes());
 };

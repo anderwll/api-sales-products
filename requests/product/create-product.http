@@ -7,8 +7,8 @@ Content-Type: application/json
 # description price unit amount
 
 {
-  "description": "Piso Laminado QSM 7MM",
-  "price": 95.88,
-  "unit": "M²",
-  "amount": 150
+  "description": "Rodape midi",
+  "price": 16.23,
+  "unit": "ML",
+  "amount": 72
 }

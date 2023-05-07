@@ -24,9 +24,9 @@ export const auth = (req: Request, res: Response, next: NextFunction) => {
     try {
         const auth = new JwtToken().verify(token);
 
-        // req.user = {
-        //     id: auth.id,
-        // };
+        req.user = {
+            id: auth.id,
+        };
 
         return next();
     } catch (error: any) {
