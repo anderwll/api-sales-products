@@ -40,8 +40,8 @@
         "zod": "^3.21.4"
     },
     "scripts": {
-        "start": "node ./dist/server.js",
-        "build": "npx tsc --watch",
+        "start": "node ./dist/main/server.js",
+        "build": "npx tsc",
         "dev": "ts-node-dev ./src/main/server.ts",
         "migration:create": "typeorm migration:create src/app/shared/infra/db/migrations/AddClomunsInTableOrders",
         "migration:run": "typeorm-ts-node-commonjs migration:run -d src/app/shared/infra/db/data-source.ts",
